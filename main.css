@@ -69,7 +69,7 @@ body {
     position: absolute;
     top: 50%;              /* put the container in the middle vertically */
     left: 0;
-    width: 100%;
+    width: var(--size);
     transform: translateY(-50%);  /* shift it up by half its height */
     pointer-events: none;
     overflow: hidden;      /* or visible, if you want to see the whole PNG even if it exceeds */
