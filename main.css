@@ -67,28 +67,32 @@ body {
 
 .cloud {
     position: absolute;
-    top: 0;
+    top: 50%;              /* put the container in the middle vertically */
     left: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    
-    /* This line centers the clouds vertically in the window */
-    display: flex;
-    align-items: center;
+    transform: translateY(-50%);  /* shift it up by half its height */
+    pointer-events: none;
+    overflow: hidden;      /* or visible, if you want to see the whole PNG even if it exceeds */
 }
 
 .cloud img {
-    position: relative;
+    position: absolute;
+    top: 0;
     left: 0;
-    width: 100%;
+    width: 100%;           /* or a smaller value if the PNG is big */
     max-width: none;
     opacity: 0.6;
 
-    /* start slightly off-screen to the left */
+    /* start off-screen left, centered because the parent is centered */
     transform: translateX(-100%);
     animation: cld calc(30s * var(--i)) linear infinite;
     animation-delay: calc(-5s * var(--i));
+}
+
+/* ⬅ only move horizontally */
+@keyframes cld {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 @keyframes cld {
