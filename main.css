@@ -29,7 +29,7 @@
     overflow: hidden;
 }
 .cloud img{
-    animation: cld calc(8s * var(--i)) linear infinite;
+    animation: cld calc(20s * var(--i)) linear infinite;
     opacity: .6;
     max-width: 100%;
     position: absolute;
