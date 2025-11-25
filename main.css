@@ -75,18 +75,30 @@ body {
 
 .cloud img {
     position: absolute;
-    top: 50%;                    /* Position in middle vertically */
-    transform: translateY(-50%); /* Center them vertically */
-    left: -800px;                /* Start off-screen to the left */
-    width: 1800px;                /* Made bigger */
-    height: 600px;               /* Made bigger */
+    top: 50%;
+    transform: translateY(-50%);
+    left: -800px;  /* Start further off-screen */
+    width: 1800px;
+    height: 600px;
     max-width: none;
-    opacity: .7;
+    opacity: 0;  /* Start at 0 instead of 0.7 */
     animation: cld calc(30s * var(--i)) linear infinite;
     animation-delay: calc(-5s * var(--i));
 }
 
 @keyframes cld {
-    0%   { transform: translateX(0) translateY(-50%); }      /* Include translateY in animation */
-    100% { transform: translateX(calc(100vw + 800px)) translateY(-50%); }  /* Move all the way across */
+    0%   { 
+        transform: translateX(0) translateY(-50%);
+        opacity: 0;
+    }
+    8%   { 
+        opacity: 0.7;
+    }
+    92%  { 
+        opacity: 0.7;
+    }
+    100% { 
+        transform: translateX(calc(100vw + 800px)) translateY(-50%);
+        opacity: 0;
+    }
 }
