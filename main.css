@@ -88,5 +88,5 @@ body {
 
 @keyframes cld {
     0%   { transform: translateX(0) translateY(-50%); }      /* Include translateY in animation */
-    100% { transform: translateX(calc(100vw + 600px)) translateY(-50%); }  /* Move all the way across */
+    100% { transform: translateX(calc(100vw + 800px)) translateY(-50%); }  /* Move all the way across */
 }
