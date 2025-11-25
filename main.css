@@ -67,12 +67,14 @@ body {
 
 .cloud {
     position: absolute;
-    top: 50%;              /* put the container in the middle vertically */
+    top: 0;              /* put the container in the middle vertically */
     left: 0;
     width: 100vw;
-    transform: translateY(-50%);  /* shift it up by half its height */
+    height: 100vh;
+    transform: none;  /* shift it up by half its height */
     pointer-events: none;
-    overflow: hidden;      /* or visible, if you want to see the whole PNG even if it exceeds */
+    overflow: visible; /* or visible, if you want to see the whole PNG even if it exceeds */
+    z-index: 10;
 }
 
 .cloud img {
@@ -88,6 +90,6 @@ body {
 
 /* ⬅ only move horizontally */
 @keyframes cld {
-    0%   { transform: translateX(-100%); }
+    0%   { transform: translateX(0); }
     100% { transform: translateX(100%); }
 }
