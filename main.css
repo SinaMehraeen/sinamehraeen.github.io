@@ -82,11 +82,8 @@ body {
     width: 120vw;           /* or a smaller value if the PNG is big */
     max-width: none;
     opacity: 0.6;
-
-    /* start off-screen left, centered because the parent is centered */
-    transform: translateX(-100%);
     animation: cld calc(30s * var(--i)) linear infinite;
-    /*animation-delay: calc(-5s * var(--i));
+    animation-delay: calc(-5s * var(--i));
 }
 
 /* ⬅ only move horizontally */
