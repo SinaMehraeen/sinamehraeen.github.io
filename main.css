@@ -72,8 +72,7 @@ body {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: 10;
-    background: rgba(255, 0, 0, 0.2); /* Temporary red overlay to see the container */
+    z-index: 10;    
 }
 
 .cloud img {
