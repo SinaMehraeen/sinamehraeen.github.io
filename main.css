@@ -80,8 +80,8 @@ body {
     top: 50%;                    /* Position in middle vertically */
     transform: translateY(-50%); /* Center them vertically */
     left: -600px;                /* Start off-screen to the left */
-    width: 600px;                /* Made bigger */
-    height: 200px;               /* Made bigger */
+    width: 1800px;                /* Made bigger */
+    height: 600px;               /* Made bigger */
     max-width: none;
     opacity: .7;
     animation: cld calc(30s * var(--i)) linear infinite;
