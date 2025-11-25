@@ -67,29 +67,34 @@ body {
 
 .cloud {
     position: absolute;
-    top: 0;              /* put the container in the middle vertically */
+    top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    transform: none;  /* shift it up by half its height */
     pointer-events: none;
-    overflow: visible; /* or visible, if you want to see the whole PNG even if it exceeds */
     z-index: 10;
+    background: rgba(255, 0, 0, 0.2); /* Temporary red overlay to see the container */
 }
 
 .cloud img {
     position: absolute;
-    top: 0;
     left: 0;
-    width: 120vw;           /* or a smaller value if the PNG is big */
+    width: 300px;        /* Temporary fixed size */
+    height: 100px;       /* Temporary fixed size */
     max-width: none;
-    opacity: 0.6;
+    opacity: 1;          /* Temporary full opacity */
+    background: blue;    /* Temporary background to see if elements exist */
     animation: cld calc(30s * var(--i)) linear infinite;
     animation-delay: calc(-5s * var(--i));
 }
 
-/* ⬅ only move horizontally */
+.cloud img:nth-child(1) { top: 10%; }
+.cloud img:nth-child(2) { top: 25%; }
+.cloud img:nth-child(3) { top: 40%; }
+.cloud img:nth-child(4) { top: 15%; }
+.cloud img:nth-child(5) { top: 35%; }
+
 @keyframes cld {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(150); }
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100vw); }
 }
